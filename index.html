@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Milk</title>
+  <script src="milk.js"></script>
+</head>
+<body>
+  <h1>Convert your measurements to gallons of milk.</h1>
+  <h5>Weight, distance, and speed!</h5>
+  <div>
+    <p>Convert this:</p>
+    <input id="num"></input>
+    <select id="unit1">
+      <option value="lbs">pounds (lbs)</option>
+      <option value="m">meters (m)</option>
+      <option value="s">seconds (s)</option>
+      <option value="ft">feet (ft)</option>
+      <option value="mi">miles (mi)</option>
+      <option value="h">hours (h)</option>
+      <option value="gal">gallons of milk (gal)</option>
+    </select>
+  </div>
+  <div>
+    <p>to this:</p>
+    <select id='unit2'>
+      <option value="lbs">pounds (lbs)</option>
+      <option value="m">meters (m)</option>
+      <option value="s">seconds (s)</option>
+      <option value="ft">feet (ft)</option>
+      <option value="mi">miles (mi)</option>
+      <option value="h">hours (h)</option>
+      <option value="gal">gallons of milk (gal)</option>
+    </select>
+    <button onclick="calculate()">Go</button>
+    <p>Result:</p>
+    <p id="answer"></p>
+    <!--
+    <p>Errors: </p>
+    -->
+  </div>
+</body>
+</html>
