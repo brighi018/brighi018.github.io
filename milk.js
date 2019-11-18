@@ -46,7 +46,10 @@ function calculate() {
     default:
       answer = "Error calculating. One of the units must be gallons of milk.";
   }
-  document.getElementById('answer').innerHTML = answer + " gal<sub>" + sub + "</sub>";
+  if (unit != "gal") {
+    sub = "";
+  }
+  document.getElementById('answer').innerHTML = answer + " " + unit + "<sub>" + sub + "</sub>";
   console.log("answer is " + answer);
 }
 
@@ -58,7 +61,7 @@ function lbsToGal(lbs, rev) {
   if (rev == false) {
     return lbs / 8.6;
   } else {
-    galToLbs(lbs);
+    return galToLbs(lbs);
   }
 }
 
