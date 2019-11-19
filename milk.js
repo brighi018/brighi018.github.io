@@ -49,10 +49,11 @@ function calculate() {
   if (unit != "gal") {
     sub = "";
   }
-  if (!((u1 == "gal" && u2 != "gal") && (u1 != "gal" && u2 == "gal"))) {
+  answer += " " + unit + "<sub>" + sub + "</sub>";
+  if (!((u1 == "gal" && u2 != "gal") || (u1 != "gal" && u2 == "gal"))) {
     answer = "Error calculating. One of the units must be gallons of milk.";
   }
-  document.getElementById('answer').innerHTML = answer + " " + unit + "<sub>" + sub + "</sub>";
+  document.getElementById('answer').innerHTML = answer;
   console.log("answer is " + answer);
 }
 
