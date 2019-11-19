@@ -46,10 +46,11 @@ function calculate() {
     default:
       answer = "Error calculating. One of the units must be gallons of milk.";
   }
-  if (unit != "gal") {
-    sub = "";
+  if (u2 != "gal") {
+    answer += " " + unit;
+  } else {
+    answer += " gal" + "<sub>" + sub + "</sub>";
   }
-  answer += " " + unit + "<sub>" + sub + "</sub>";
   if (!((u1 == "gal" && u2 != "gal") || (u1 != "gal" && u2 == "gal"))) {
     answer = "Error calculating. One of the units must be gallons of milk.";
   }
