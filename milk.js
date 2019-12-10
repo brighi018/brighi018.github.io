@@ -87,7 +87,7 @@ function galToFt(gal) {
 }
 function ftToGal(ft, rev) {
   if (rev == false) {
-    return mToGal(ft / 3.28);
+    return mToGal(ft / 3.28, rev);
   } else {
     return galToFt(ft);
   }
@@ -98,7 +98,7 @@ function galToMi(gal) {
 }
 function miToGal(mi, rev) {
   if (rev == false) {
-    return mToGal(1609.344 * mi);
+    return mToGal(1609.344 * mi, rev);
   } else {
     return galToMi(mi);
   }
@@ -121,7 +121,7 @@ function galToH(gal) {
 }
 function hToGal(h, rev) {
   if (rev == false) {
-    return sToGal(h * 3600);
+    return sToGal(h * 3600, rev);
   } else {
     return galToH(h);
   }
@@ -129,11 +129,11 @@ function hToGal(h, rev) {
 
 /* complex functions */
 function gpgToMph(gpg) {
-  return galToMi(hToGal(gpg));
+  return galToMi(hToGal(gpg, rev));
 }
 function mphToGpg(mph, rev) {
   if (rev == false) {
-    return galToH(miToGal(mph));
+    return galToH(miToGal(mph, rev));
   } else {
     return gpgToMph(mph);
   }
